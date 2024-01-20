@@ -5,4 +5,8 @@ import Foundation
 
 let myName = "Amy"
 let yourName = "Alice"
-myName=yourName
+
+var names  [
+    myName,
+    yourName
+]
