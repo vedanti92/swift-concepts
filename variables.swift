@@ -6,6 +6,7 @@ import Foundation
 let myName = "Amy"
 let yourName = "Alice"
 
+// array
 var names = [
     myName,
     yourName
