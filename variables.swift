@@ -6,7 +6,9 @@ import Foundation
 let myName = "Amy"
 let yourName = "Alice"
 
-var names  [
+var names = [
     myName,
     yourName
 ]
+names.append("Bar")
+names.append("Baz")
