@@ -14,17 +14,17 @@ var names = [
 names.append("Bar")
 names.append("Baz")
 
-let foo = "Foo"
-var foo2 = foo
+let foo: String = "Foo"
+var foo2: String = foo
 foo2 = "Foo 2"
-foo
-foo2
+print(foo)
+print(foo2)
 
-let  moreNames = [
+let  moreNames: [String] = [
     "Foo",
     "Bar"
 ]
-var copy = moreNames
+var copy: [String] = moreNames
 copy.append("Baz")
-moreNames
-copy
+print(moreNames)
+print(copy)
