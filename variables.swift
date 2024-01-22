@@ -9,3 +9,4 @@ temperature = 80
 print("The tempearature on \(day) evening is \(temperature)°F.")
 
 let weeklyTemperature = 75
+temperature = weeklyTemperature
