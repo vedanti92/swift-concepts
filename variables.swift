@@ -5,4 +5,5 @@ print("The temperature on \(day) is \(dailyTemperature)°F.")
 
 var temperature = 70
 print("The tempearature on \(day) morning is \(temperature)°F.")
-tempearature = 80
+temperature = 80
+print("The tempearature on \(day) evening is \(temperature)°F.")
