@@ -7,3 +7,5 @@ var temperature = 70
 print("The tempearature on \(day) morning is \(temperature)°F.")
 temperature = 80
 print("The tempearature on \(day) evening is \(temperature)°F.")
+
+let weeklyTemperature = 75
