@@ -8,3 +8,7 @@ levelBonusScore = 20
 print("The level's bonus score is \(levelBonusScore).")
 gameScore += Int(levelBonusScore)
 print("The game's final score is \(gameScore).")
+
+let levelLowestScore = 50
+let levelHighestScore = 99
+let levels = 10
