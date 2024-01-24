@@ -4,3 +4,4 @@ gameScore += levelScore
 print("The game's score is \(gameScore).")
 
 var levelBonusScore = 10.0
+levelBonusScore = 20
