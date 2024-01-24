@@ -13,5 +13,5 @@ let levelLowestScore = 50
 let levelHighestScore = 99
 let levels = 10
 let levelScoreDifference = levelHighestScore - levelLowestScore
-let levelAverageScore = Double(levelScoreDifference)/Double(levels)
+let levelAverageScore = Double(levelScoreDifference / Double(levels)
 print("The level's average score is \(levelAverageScore).")
