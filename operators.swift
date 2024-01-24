@@ -7,3 +7,4 @@ var levelBonusScore = 10.0
 levelBonusScore = 20
 print("The level's bonus score is \(levelBonusScore).")
 gameScore += Int(levelBonusScore)
+print("The game's final score is \(gameScore).")
