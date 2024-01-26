@@ -11,3 +11,4 @@ print("It is \(time) on \(day).")
 let timezone = "PST"
 time += " \(timezone)"
 print("It is \(time).")
+print("It is \(time) on \(day).")
