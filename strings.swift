@@ -7,3 +7,5 @@ let period = "PM"
 var time = hour + ":" + minutes + " " + period
 print("It is \(time).")
 print("It is \(time) on \(day).")
+
+let timezone = "PST"
