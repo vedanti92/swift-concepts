@@ -5,3 +5,9 @@ if (freeApp == true) {
 
 let morningTemperature = 70
 let eveningTemperature = 80
+if (morningTemperature < eveningTemperature) {
+    print(morningTemperature)
+} else {
+    print(eveningTemperature)
+    
+}
