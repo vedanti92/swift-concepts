@@ -17,3 +17,8 @@ if (temperatureDegree == "Fahrenheit") {
 } else {
     print("The app uses Celcius degrees.")
 }
+if (temperatureDegree == "Fahrenheit" || temperatureDegree == "Celcius") {
+    print("The app is configured properly.")
+} else {
+    print("The app isn't configured properly.")
+}
