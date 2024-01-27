@@ -22,3 +22,9 @@ if (temperatureDegree == "Fahrenheit" || temperatureDegree == "Celcius") {
 } else {
     print("The app isn't configured properly.")
 }
+
+switch temperatureDegree {
+    case "Fahrenheit": print("The app is configured for the US.")
+    case "Celcius": print("The app is configured for the Europe.")
+    default: print("The app has an unknown configuration.")
+}
