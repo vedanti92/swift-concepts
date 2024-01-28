@@ -6,4 +6,5 @@ for level in 1...levels {
         print("Skip bonus level \(bonusLevel).")
         continue
     }
+    print("Play level \(level)")
 }
