@@ -8,7 +8,7 @@ for level in 1...levels {
     }
     print("Play level \(level).")
     if (level == freeLevels) {
-        print("Number of free levels are \(freeLevels).")
+        print("You have played all \(freeLevels) free levels. Buy the game to play the remaining \(levels - freeLevels) levels.")
         break
     }
 }
