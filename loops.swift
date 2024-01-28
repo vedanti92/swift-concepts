@@ -6,5 +6,9 @@ for level in 1...levels {
         print("Skip bonus level \(bonusLevel).")
         continue
     }
-    print("Play level \(level)")
+    print("Play level \(level).")
+    if (level == freeLevels) {
+        print("Number of free levels are \(freeLevels).")
+        break
+    }
 }
