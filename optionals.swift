@@ -18,6 +18,11 @@ print("The passcode of the app is \(accessCode).")
 let firstPassword = "hello"
 let secondPassword = "world"
 if let firstPasscode = Int(firstPassword), let secondPasscode = Int(secondPassword) {
+    print("The first passcode of the app is \(firstAccessCode) and the second passcode of the app is \(secondAccessCode).")
+} else {
+    print("Invalid passcodes!")
+}
+if let firstPasscode = Int(firstPassword), let secondPasscode = Int(secondPassword) {
     firstAccessCode = firstPasscode
     secondAccessCode = secondPasscode
 } else {
