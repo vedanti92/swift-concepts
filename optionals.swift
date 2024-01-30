@@ -7,3 +7,10 @@ if let code = Int(password) {
 } else {
     print("Invalid passcode!")
 }
+let accessCode: Int
+if let code = Int(password) {
+    accessCode = code
+} else {
+    accessCode = 1111
+}
+print("The passcode of the app is \(accessCode).")
