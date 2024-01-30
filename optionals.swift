@@ -14,8 +14,9 @@ if let code = Int(password) {
     accessCode = 1111
 }
 print("The passcode of the app is \(accessCode).")
-firstPassword = "hello"
-secondPassword = "world"
+
+let firstPassword = "hello"
+let secondPassword = "world"
 if let firstPasscode = Int(firstPassword), let secondPasscode = Int(secondPassword) {
     firstAccessCode = firstPasscode
     secondAccessCode = secondPasscode
