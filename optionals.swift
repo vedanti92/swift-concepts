@@ -14,3 +14,13 @@ if let code = Int(password) {
     accessCode = 1111
 }
 print("The passcode of the app is \(accessCode).")
+firstPassword = "hello"
+secondPassword = "world"
+if let firstPasscode = Int(firstPassword), let secondPasscode = Int(secondPassword) {
+    firstAccessCode = firstPasscode
+    secondAccessCode = secondPasscode
+} else {
+    firstAccessCode = 1111
+    secondAccessCode = 2222
+}
+print("The first passcode of the app is \(firstAccessCode) and the second passcode of the app is \(secondAccessCode).")
