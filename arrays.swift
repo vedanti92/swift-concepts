@@ -5,3 +5,6 @@ if (levelScores.count == 0) {
 let firstLevelScore = 10
 levelScores.append(firstLevelScore)
 print("The first level's score is \(levelScores[0])!")
+let levelBonusScore = 40
+levelScores[0] += levelBonusScore
+print("The first level's score is \(levelScores[0])!")
