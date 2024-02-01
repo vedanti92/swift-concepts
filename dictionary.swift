@@ -1,0 +1,1 @@
+var weeklyTemperatures [String: Int]
