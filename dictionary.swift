@@ -8,3 +8,8 @@ if let temperature = weeklyTemperatures["Sunday"] {
     weeklyTemperatures["Sunday"] = 100
     print("The temperature on Sunday is \(weeklyTemperatures["Sunday"]!)°F.")
 }
+if (weeklyTemperatures.count == 7) {
+    print("You have access to the weather forecast of the whole week.")
+    weeklyTemperatures = [:]
+    print("Reset weekly temperatures for next week!")
+}
