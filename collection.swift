@@ -7,3 +7,8 @@ for levelScore in levelScores {
     gameScore += levelScore
     print("The final game score is \(gameScore).")
 }
+
+let weeklyTemperatures = ["Monday": 70, "Tuesday": 75, "Wednesday": 80, "Thursday": 85, "Friday": 90, "Saturday": 95, "Sunday": 100]
+for (day, temperature) in weeklyTemperatures {
+    print("The temperature on \(day) is \(temperature)°F.")
+}
