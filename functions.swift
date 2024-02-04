@@ -1,4 +1,4 @@
 var goldBars = 0
-func unlockTreasureChest(parameters) -> Type {
+func unlockTreasureChest(parameters) -> Int {
     
 }
