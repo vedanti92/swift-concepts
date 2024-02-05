@@ -1,6 +1,6 @@
 var goldBars = 0
-func incrementInventory(_ inventory: inout Int, by amount: Int = 100) -> Int {
+func incrementInventory(_ inventory: inout Int, by amount: Int = 100) {
     inventory += amount
 }
-goldBars = incrementInventory(increment: goldBars, by: 200)
+incrementInventory(&goldBars)
 print(goldBars)
