@@ -3,3 +3,4 @@ let unlockTreasureChest = {(inventory: inout Int) -> () in
     inventory += 100
 }
 unlockTreasureChest(&goldBars)
+print(goldBars)
