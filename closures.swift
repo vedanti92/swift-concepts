@@ -1,0 +1,1 @@
+var goldBars = 0
