@@ -1,5 +1,5 @@
 var goldBars = 0
-let unlockTreasureChest = {(inventory: inout Int) -> () in
+let unlockTreasureChest = {(inventory: inout Int) in
     inventory += 100
 }
 unlockTreasureChest(&goldBars)
