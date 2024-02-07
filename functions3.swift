@@ -3,3 +3,4 @@ func spendTenGoldBars(from inventory: inout Int, completion: (Int) -> Void) {
     inventory -= 10
     completion(inventory)
 }
+print("You had \(goldBars) gold bars.")
