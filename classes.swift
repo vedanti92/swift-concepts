@@ -6,6 +6,8 @@ class LocalFile {
         self.fileExtension = fileExtension
     }
     var fullFileName: String {
-        return name + fileExtension
+        return name + "." + fileExtension
     }
 }
+let file = LocalFile(name: "image", fileExtension: "png")
+print(file.fullFileName)
