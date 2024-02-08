@@ -2,7 +2,7 @@ struct TableReservation {
     var name: String
     let tableNumber: Int
     mutating func updateBooking(updatedName: String) {
-
+        name = updatedName
     }
 }
 var johnBooking = TableReservation(name: "John", tableNumber: 1)
