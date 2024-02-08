@@ -5,4 +5,7 @@ class LocalFile {
         self.name = name
         self.fileExtension = fileExtension
     }
+    var fullFileName: String {
+        return name + fileExtension
+    }
 }
