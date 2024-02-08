@@ -3,3 +3,4 @@ struct TableReservation {
     let tableNumber: Int
 }
 var johnBooking = TableReservation(name: "John", tableNumber: 1)
+print(johnBooking)
