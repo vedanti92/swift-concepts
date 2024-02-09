@@ -1,13 +1,26 @@
 // Project - Banking System
 
-class Greet {
-    let virtualBankSystem = ""
-    func welcome() {
+class VirtualBankSystem {
+    let accountType = ""
+    func welcomeCustomer() {
         print("Welcome to your virtual bank system.")
     }
-    func accountType() {
+    func onboardCustomerAccountOpening() {
         print("What kind of account would you like to open?")
         print("1. Debit account")
         print("2. Credit account")
+    }
+    func makeAccount(numberPadKey: Int) {
+        print("The selected option is \(numberPadKey).")
+        switch numberPadKey {
+        case 1:
+            accountType = "debit"
+        case 2:
+            accountType = "credit"
+        default:
+            print("Invalid input: \(numberPadKey)")
+            return
+        }
+        print("You have opened a \(accountType) account.")
     }
 }
