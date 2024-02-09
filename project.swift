@@ -24,3 +24,5 @@ class VirtualBankSystem {
         print("You have opened a \(accountType) account.")
     }
 }
+let virtualBankSystem = VirtualBankSystem()
+virtualBankSystem.welcomeCustomer()
