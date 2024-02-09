@@ -1,7 +1,7 @@
 // Project - Banking System
 
 class VirtualBankSystem {
-    let accountType = ""
+    var accountType = ""
     func welcomeCustomer() {
         print("Welcome to your virtual bank system.")
     }
@@ -26,3 +26,8 @@ class VirtualBankSystem {
 }
 let virtualBankSystem = VirtualBankSystem()
 virtualBankSystem.welcomeCustomer()
+repeat {
+    virtualBankSystem.onboardCustomerAccountOpening()
+    let numberPadKey = Int.random(in: 1...3)
+    virtualBankSystem.makeAccount(numberPadKey: numberPadKey)
+} while virtualBankSystem.accountType == ""
