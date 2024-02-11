@@ -33,5 +33,16 @@ repeat {
 } while virtualBankSystem.accountType == ""
 
 struct BankAccount {
-    
+    var debitBalance = 0
+    var creditBalance = 0
+    let creditLimit = 100
+    var debitBalanceInfo: String {
+        "Debit balanace: $\(debitBalance)."
+    }
+    var availableCredit: Int {
+        creditLimit + creditBalance
+    }
+    var creditBalanceInfo: String {
+        "Available credit: $\(availableCredit)"
+    }
 }
