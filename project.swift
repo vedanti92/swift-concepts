@@ -66,4 +66,12 @@ struct BankAccount {
             print("Debit withdraw: $\(amount). \(debitBalanceInfo)")
         }
     }
+    func creditWithdraw(_ amount: Int) {
+        if amount > availableCredit {
+            print("Insufficient credit to withdraw $\(amount). \(creditBalanceInfo)")
+        } else {
+            creditBalance -= amount
+            print("Credit withdraw: $\(amount). \(creditBalanceInfo)")
+        }
+    }
 }
