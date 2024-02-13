@@ -45,4 +45,8 @@ struct BankAccount {
     var creditBalanceInfo: String {
         "Available credit: $\(availableCredit)"
     }
+    func debitDeposit(amount: Int) {
+        debitBalance += amount
+        print("Deposited $\(amount). \(debitBalanceInfo)")
+    }
 }
