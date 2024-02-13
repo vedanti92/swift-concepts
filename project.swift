@@ -49,4 +49,13 @@ struct BankAccount {
         debitBalance += amount
         print("Deposited $\(amount). \(debitBalanceInfo)")
     }
+    func creditDeposit(amount: Int) {
+        creditBalance += amount
+        print("Credit $\(amount). \(creditBalanceInfo)")
+        if creditBalance == 0 {
+            print("Paid off credit balance.")
+        } else if creditBalance > 0 {
+            print("Overpaid credit balance.")
+        }
+    }
 }
