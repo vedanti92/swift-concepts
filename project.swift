@@ -75,3 +75,16 @@ struct BankAccount {
         }
     }
 }
+var bankAccount = BankAccount()
+// testing debit banking operations
+print(bankAccount.debitBalanceInfo)
+bankAccount.debitDeposit(100)
+bankAccount.debitWithdraw(20)
+bankAccount.debitWithdraw(81)
+// testing credit banking operations
+print(bankAccount.creditBalanceInfo)
+bankAccount.creditWithdraw(101)
+bankAccount.creditWithdraw(100)
+bankAccount.creditDeposit(50)
+bankAccount.creditDeposit(50)
+bankAccount.creditDeposit(100)
