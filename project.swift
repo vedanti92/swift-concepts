@@ -45,11 +45,11 @@ struct BankAccount {
     var creditBalanceInfo: String {
         "Available credit: $\(availableCredit)"
     }
-    func debitDeposit(_ amount: Int) {
+    mutating func debitDeposit(_ amount: Int) {
         debitBalance += amount
         print("Deposited $\(amount). \(debitBalanceInfo)")
     }
-    func creditDeposit(_ amount: Int) {
+    mutating func creditDeposit(_ amount: Int) {
         creditBalance += amount
         print("Credit $\(amount). \(creditBalanceInfo)")
         if creditBalance == 0 {
@@ -58,7 +58,7 @@ struct BankAccount {
             print("Overpaid credit balance.")
         }
     }
-    func debitWithdraw(_ amount: Int) {
+    mutating func debitWithdraw(_ amount: Int) {
         if amount > debitBalance {
             print("Insufficient fund to withdraw $\(amount). \(debitBalanceInfo)")
         } else {
@@ -66,7 +66,7 @@ struct BankAccount {
             print("Debit withdraw: $\(amount). \(debitBalanceInfo)")
         }
     }
-    func creditWithdraw(_ amount: Int) {
+    mutating func creditWithdraw(_ amount: Int) {
         if amount > availableCredit {
             print("Insufficient credit to withdraw $\(amount). \(creditBalanceInfo)")
         } else {
