@@ -38,7 +38,7 @@ class VirtualBankSystem {
                 bankAccount.debitDeposit(transferAmount)
             }
         default:
-            
+            break
         }
     }
 }
