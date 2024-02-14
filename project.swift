@@ -23,6 +23,18 @@ class VirtualBankSystem {
         }
         print("You have opened a \(accountType) account.")
     }
+    func moneyTransfer(transferType: String, transferAmount: Int, bankAccount: inout BankAccount) {
+        switch transferType {
+        case "withdraw":
+            if accountType == "credit" {
+                bankAccount.creditWithdraw(transferAmount)
+            } else if accountType == "debit" {
+                bankAccount.debitWithdraw(transferAmount)
+            }
+        default:
+            
+        }
+    }
 }
 let virtualBankSystem = VirtualBankSystem()
 virtualBankSystem.welcomeCustomer()
