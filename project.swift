@@ -31,6 +31,12 @@ class VirtualBankSystem {
             } else if accountType == "debit" {
                 bankAccount.debitWithdraw(transferAmount)
             }
+        case "deposit":
+            if accountType == "credit" {
+                bankAccount.creditDeposit(transferAmount)
+            } else if accountType == "debit" {
+                bankAccount.debitDeposit(transferAmount)
+            }
         default:
             
         }
