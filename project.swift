@@ -1,8 +1,6 @@
-// Project - Banking System
-
 class VirtualBankSystem {
     var accountType = ""
-    isOpened = true
+    var isOpened = true
     func welcomeCustomer() {
         print("Welcome to your virtual bank system.")
     }
@@ -24,7 +22,11 @@ class VirtualBankSystem {
         }
         print("You have opened a \(accountType) account.")
     }
-    func moneyTransfer(transferType: String, transferAmount: Int, bankAccount: inout BankAccount) {
+    func transferMoney(
+        transferType: String,
+        transferAmount: Int,
+        bankAccount: inout BankAccount
+    ) {
         switch transferType {
         case "withdraw":
             if accountType == "credit" {
@@ -42,7 +44,9 @@ class VirtualBankSystem {
             break
         }
     }
-    func checkBalance(bankAccount: BankAccount) {
+    func checkBalance(
+        bankAccount: BankAccount
+    ) {
         switch accountType {
         case "credit":
             print(bankAccount.creditBalanceInfo)
@@ -53,20 +57,13 @@ class VirtualBankSystem {
         }
     }
 }
-let virtualBankSystem = VirtualBankSystem()
-virtualBankSystem.welcomeCustomer()
-repeat {
-    virtualBankSystem.onboardCustomerAccountOpening()
-    let numberPadKey = Int.random(in: 1...3)
-    virtualBankSystem.makeAccount(numberPadKey: numberPadKey)
-} while virtualBankSystem.accountType == ""
 
 struct BankAccount {
     var debitBalance = 0
     var creditBalance = 0
     let creditLimit = 100
     var debitBalanceInfo: String {
-        "Debit balanace: $\(debitBalance)."
+        "Debit balance: $\(debitBalance)"
     }
     var availableCredit: Int {
         creditLimit + creditBalance
@@ -76,23 +73,23 @@ struct BankAccount {
     }
     mutating func debitDeposit(_ amount: Int) {
         debitBalance += amount
-        print("Deposited $\(amount). \(debitBalanceInfo)")
+        print("Debit deposit: $\(amount). \(debitBalanceInfo)")
+    }
+    mutating func debitWithdraw(_ amount: Int) {
+        if amount > debitBalance {
+            print("Insufficient funds to withdraw $\(amount). \(debitBalanceInfo)")
+        } else {
+            debitBalance -= amount
+            print("Debit withdraw: $\(amount). \(debitBalanceInfo)")
+        }
     }
     mutating func creditDeposit(_ amount: Int) {
         creditBalance += amount
-        print("Credit $\(amount). \(creditBalanceInfo)")
+        print("Credit deposit: $\(amount). \(creditBalanceInfo)")
         if creditBalance == 0 {
             print("Paid off credit balance.")
         } else if creditBalance > 0 {
             print("Overpaid credit balance.")
-        }
-    }
-    mutating func debitWithdraw(_ amount: Int) {
-        if amount > debitBalance {
-            print("Insufficient fund to withdraw $\(amount). \(debitBalanceInfo)")
-        } else {
-            debitBalance -= amount
-            print("Debit withdraw: $\(amount). \(debitBalanceInfo)")
         }
     }
     mutating func creditWithdraw(_ amount: Int) {
@@ -105,6 +102,19 @@ struct BankAccount {
     }
 }
 
+let virtualBankSystem = VirtualBankSystem()
+virtualBankSystem.welcomeCustomer()
+
+repeat {
+    virtualBankSystem.onboardCustomerAccountOpening()
+    let numberPadKey = Int.random(in: 1...3)
+    virtualBankSystem.makeAccount(numberPadKey: numberPadKey)
+} while virtualBankSystem.accountType == ""
+
+let transferAmount = 50
+print("Transfer amount: $\(transferAmount)")
+var bankAccount = BankAccount()
+
 repeat {
     print("What would you like to do?")
     print("1. Check bank account")
@@ -112,19 +122,26 @@ repeat {
     print("3. Deposit money")
     print("4. Close the system")
     let option = Int.random(in: 1...5)
-    print("Selected option: \(option)")
+    print("Selected option: \(option).")
+    switch option {
+    case 1:
+        virtualBankSystem.checkBalance(bankAccount: bankAccount)
+    case 2:
+        virtualBankSystem.transferMoney(
+            transferType: "withdraw",
+            transferAmount: transferAmount,
+            bankAccount: &bankAccount
+        )
+    case 3:
+        virtualBankSystem.transferMoney(
+            transferType: "deposit",
+            transferAmount: transferAmount,
+            bankAccount: &bankAccount
+        )
+    case 4:
+        virtualBankSystem.isOpened = false
+        print("The system is closed.")
+    default:
+        break
+    }
 } while virtualBankSystem.isOpened
-
-var bankAccount = BankAccount()
-// testing debit banking operations
-print(bankAccount.debitBalanceInfo)
-bankAccount.debitDeposit(100)
-bankAccount.debitWithdraw(20)
-bankAccount.debitWithdraw(81)
-// testing credit banking operations
-print(bankAccount.creditBalanceInfo)
-bankAccount.creditWithdraw(101)
-bankAccount.creditWithdraw(100)
-bankAccount.creditDeposit(50)
-bankAccount.creditDeposit(50)
-bankAccount.creditDeposit(100)
