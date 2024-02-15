@@ -41,6 +41,16 @@ class VirtualBankSystem {
             break
         }
     }
+    func checkBalance(bankAccount: BankAccount) {
+        switch accountType {
+        case "credit":
+            print(creditBalanceInfo)
+        case "debit":
+            print(debitBalanceInfo)
+        default:
+            break
+        }
+    }
 }
 let virtualBankSystem = VirtualBankSystem()
 virtualBankSystem.welcomeCustomer()
