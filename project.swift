@@ -2,6 +2,7 @@
 
 class VirtualBankSystem {
     var accountType = ""
+    isOpened = true
     func welcomeCustomer() {
         print("Welcome to your virtual bank system.")
     }
@@ -44,14 +45,13 @@ class VirtualBankSystem {
     func checkBalance(bankAccount: BankAccount) {
         switch accountType {
         case "credit":
-            print(creditBalanceInfo)
+            print(bankAccount.creditBalanceInfo)
         case "debit":
-            print(debitBalanceInfo)
+            print(bankAccount.debitBalanceInfo)
         default:
             break
         }
     }
-    isOpened = true
 }
 let virtualBankSystem = VirtualBankSystem()
 virtualBankSystem.welcomeCustomer()
@@ -104,6 +104,17 @@ struct BankAccount {
         }
     }
 }
+
+repeat {
+    print("What would you like to do?")
+    print("1. Check bank account")
+    print("2. Withdraw money")
+    print("3. Deposit money")
+    print("4. Close the system")
+    let option = Int.random(in: 1...5)
+    print("Selected option: \(option)")
+} while virtualBankSystem.isOpened
+
 var bankAccount = BankAccount()
 // testing debit banking operations
 print(bankAccount.debitBalanceInfo)
