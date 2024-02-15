@@ -51,6 +51,7 @@ class VirtualBankSystem {
             break
         }
     }
+    isOpened = true
 }
 let virtualBankSystem = VirtualBankSystem()
 virtualBankSystem.welcomeCustomer()
